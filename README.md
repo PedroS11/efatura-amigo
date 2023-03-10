@@ -12,3 +12,4 @@ For example, if the invoice emitter contains "restaurante" in its name, it'll se
 
 > The extension doesn't save the selections, it just clicks on the categories but leaves the user the possibility to change them as they will and leave to him the responsibility to save.
 
+![Efatura](./assets/efatura.png "Efatura")
