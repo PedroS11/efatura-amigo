@@ -1,7 +1,7 @@
 {
   "name": "Efatura selector",
   "description": "Automatically select a category for each invoice",
-  "version": "1.0",
+  "version": "1.0.0",
   "manifest_version": 3,
   "action": {
     "default_popup": "index.html",
@@ -12,9 +12,6 @@
     "48": "logo192.png",
     "128": "logo192.png"
   },
-  "permissions": [
-    "activeTab"
-  ],
   "content_scripts": [
     {
       "matches": [

@@ -1,7 +1,7 @@
 {
   "name": "efatura-selector",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "license": "MIT",
   "dependencies": {
     "@craco/craco": "^7.0.0",
     "@testing-library/jest-dom": "^5.16.5",
