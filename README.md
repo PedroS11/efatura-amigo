@@ -24,3 +24,13 @@ For example, if the invoice emitter contains "restaurante" in its name, it'll se
 
 If you encounter any problems, bugs or other issues with the repo, please create
 an [issue in the GitHub repo](https://github.com/PedroS11/Efatura-Selector/issues).
+
+## License
+
+[MIT](https://github.com/PedroS11/Efatura-Selector/blob/main/LICENSE.md)
+
+## Donation
+
+If you appreciated this extension and want to help me, feel free to do it!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/donate/?hosted_button_id=2EUE3TRXGC4KQ)
