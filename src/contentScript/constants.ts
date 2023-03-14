@@ -5,10 +5,10 @@ export enum BUTTONS_MAPPING {
     "Imoveis",
     "Lares",
     "Outros",
-    "IGNORE_BECAUSE_ITS_A_P_TAG",
-    "Reparacao Automovel",
+    // Number 6 is a <p> tag
+    "Reparacao Automovel" = 7,
     "Reparacao Motas",
-    "Alimentacao",
+    "Alimentacao/Hotelaria",
     "Cabeleireiro",
     "Animais de Estimacao",
     "Transportes"
@@ -16,9 +16,10 @@ export enum BUTTONS_MAPPING {
 
 export const SAUDE_KEYWORDS = ["hospital", "farmacia", "saude"];
 export const OUTROS_KEYWORDS = ["sonae", "continente", "supermercado", "auchan", "pingo doce", "lidl", "combusti"]
-export const ALIMENTACAO_KEYWORDS = ["restaurante"]
+export const ALIMENTACAO_HOTELARIA_KEYWORDS = ["restaurante", "restauração", "hotelaria"]
 export const TRANSPORTES_KEYWORDS = ["metro", "comboio"]
 export const CABELEIREIRO_KEYWORDS = ["cabeleireiro"]
+export const REPARACAO_AUTOMOVEL_KEYWORDS = ["automóvel"]
 
 export const EXACT_COMPANIES_MAPPING = [
     {
@@ -31,6 +32,6 @@ export const EXACT_COMPANIES_MAPPING = [
     },
     {
         company: "244164754 - Ana Cristina da Costa Marques",
-        button: BUTTONS_MAPPING.Alimentacao
+        button: BUTTONS_MAPPING["Alimentacao/Hotelaria"]
     }
 ]
