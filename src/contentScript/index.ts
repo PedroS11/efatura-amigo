@@ -7,10 +7,12 @@ if (table?.childElementCount > 0) {
     for (let item of table.children) {
         const company: string = item.firstChild.textContent.trim()
 
-        const buttonMapped: BUTTONS_MAPPING = mapCompanyToButton(company)
+        const buttonMapped: BUTTONS_MAPPING | undefined = mapCompanyToButton(company)
+        if (buttonMapped) {
+            // @ts-ignore
+            const buttons = item.lastChild!.children[0];
 
-        // @ts-ignore
-        const buttons = item.lastChild!.children[0];
-        buttons.children[buttonMapped].click()
+            buttons.children[buttonMapped].click()
+        }
     }
 }

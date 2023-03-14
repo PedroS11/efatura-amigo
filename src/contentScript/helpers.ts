@@ -1,5 +1,6 @@
 import {
     ALIMENTACAO_HOTELARIA_KEYWORDS,
+    ANIMAIS_KEYWORDS,
     BUTTONS_MAPPING,
     CABELEIREIRO_KEYWORDS,
     EXACT_COMPANIES_MAPPING,
@@ -11,7 +12,7 @@ import {
 
 const keywordMatches = (company: string, keywords: string[]): boolean => keywords.some((word: string) => company.includes(word))
 
-const similarMappings = (company: string): BUTTONS_MAPPING => {
+const similarMappings = (company: string): BUTTONS_MAPPING | undefined => {
     const companyLowercase = company.toLowerCase()
 
     if (keywordMatches(companyLowercase, SAUDE_KEYWORDS)) {
@@ -26,7 +27,9 @@ const similarMappings = (company: string): BUTTONS_MAPPING => {
         return BUTTONS_MAPPING.Outros
     } else if (keywordMatches(companyLowercase, REPARACAO_AUTOMOVEL_KEYWORDS)) {
         return BUTTONS_MAPPING["Reparacao Automovel"]
-    } else return BUTTONS_MAPPING.Outros
+    } else if (keywordMatches(companyLowercase, ANIMAIS_KEYWORDS)) {
+        return BUTTONS_MAPPING["Animais de Estimacao"]
+    }
 }
 
 export const mapCompanyToButton = (company: string): number => {
