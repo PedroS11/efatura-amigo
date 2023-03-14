@@ -1,6 +1,6 @@
 {
   "name": "Efatura selector",
-  "description": "Automatically select a category for each invoice",
+  "description": "Helper to select the most suitable category of each invoice",
   "version": "1.0.0",
   "manifest_version": 3,
   "action": {

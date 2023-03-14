@@ -1,7 +1,7 @@
 {
   "name": "efatura-selector",
   "version": "1.0.0",
-  "description": "Automatically select a category for each invoice",
+  "description": "Helper to select the most suitable category of each invoice",
   "license": "MIT",
   "dependencies": {
     "@craco/craco": "^7.0.0",

@@ -15,11 +15,11 @@ export enum BUTTONS_MAPPING {
 }
 
 export const SAUDE_KEYWORDS = ["hospital", "farmacia", "saude"];
-export const OUTROS_KEYWORDS = ["sonae", "continente", "supermercado", "auchan", "pingo doce", "lidl", "combusti"]
-export const ALIMENTACAO_HOTELARIA_KEYWORDS = ["restaurante", "restauração", "hotelaria"]
+export const OUTROS_KEYWORDS = ["sonae", "continente", "supermercado", "auchan", "pingo doce", "lidl", "mercadona", "combustí"]
+export const ALIMENTACAO_HOTELARIA_KEYWORDS = ["restaurante", "restauração", "hotelaria", "hotel"]
 export const TRANSPORTES_KEYWORDS = ["metro", "comboio"]
-export const CABELEIREIRO_KEYWORDS = ["cabeleireiro"]
-export const REPARACAO_AUTOMOVEL_KEYWORDS = ["automóvel"]
+export const CABELEIREIRO_KEYWORDS = ["cabeleireiro", "cabeleireira"]
+export const REPARACAO_AUTOMOVEL_KEYWORDS = ["automóvel", "oficina"]
 
 export const EXACT_COMPANIES_MAPPING = [
     {
