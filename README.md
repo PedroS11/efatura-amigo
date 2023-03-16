@@ -1,4 +1,7 @@
-# Efatura Selector
+# Efatura Amigo
+
+[![](https://img.shields.io/chrome-web-store/v/mefalgjilgiijibpafochindaickeabj)](https://chrome.google.com/webstore/detail/efatura-amigo/mefalgjilgiijibpafochindaickeabj)
+[![](https://img.shields.io/chrome-web-store/users/mefalgjilgiijibpafochindaickeabj)](https://chrome.google.com/webstore/detail/efatura-amigo/mefalgjilgiijibpafochindaickeabj)
 
 The aim of this project is to, when you access your Efatura validation page, automatically select a category for each
 invoice.
