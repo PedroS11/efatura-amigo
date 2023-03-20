@@ -2,6 +2,12 @@
 
 [![](https://img.shields.io/chrome-web-store/v/mefalgjilgiijibpafochindaickeabj)](https://chrome.google.com/webstore/detail/efatura-amigo/mefalgjilgiijibpafochindaickeabj)
 [![](https://img.shields.io/chrome-web-store/users/mefalgjilgiijibpafochindaickeabj)](https://chrome.google.com/webstore/detail/efatura-amigo/mefalgjilgiijibpafochindaickeabj)
+[![](https://img.shields.io/chrome-web-store/stars/mefalgjilgiijibpafochindaickeabj)](https://chrome.google.com/webstore/detail/efatura-amigo/mefalgjilgiijibpafochindaickeabj)
+
+
+[![](https://img.shields.io/amo/v/efatura-amigo.svg)](https://addons.mozilla.org/en-US/firefox/addon/efatura-amigo)
+[![](https://img.shields.io/amo/users/efatura-amigo.svg)](https://addons.mozilla.org/en-US/firefox/addon/efatura-amigo/)
+[![](https://img.shields.io/amo/rating/efatura-amigo.svg)](https://addons.mozilla.org/en-US/firefox/addon/efatura-amigo/)
 
 The aim of this project is to, when you access your Efatura validation page, automatically select a category for each
 invoice.
