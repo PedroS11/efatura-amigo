@@ -1,6 +1,6 @@
 {
   "name": "efatura-selector",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Helper to select the most suitable category of each invoice",
   "license": "MIT",
   "dependencies": {
