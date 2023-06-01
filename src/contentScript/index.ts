@@ -9,7 +9,7 @@ if (table?.childElementCount > 0) {
 
         // Click on the expected category
         const buttonMapped: CATEGORY_BUTTONS_MAPPING | undefined = mapCompanyToButton(company)
-        if (buttonMapped) {
+        if (buttonMapped !== undefined) {
             const categoryButtons = item.children[COLUMNS_MAPPING.CATEGORY_BUTTONS_POSITION]!.children[0];
 
             // @ts-ignore
