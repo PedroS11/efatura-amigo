@@ -1,10 +1,14 @@
 {
-  "name": "efatura-selector",
+  "name": "efatura-amigo",
   "version": "1.1.1",
-  "description": "Helper to select the most suitable category of each invoice",
+  "description": "Ferramenta de ajuda na pré-seleção das categorias das faturas no Portal EFatura",
   "license": "MIT",
   "dependencies": {
     "@craco/craco": "^7.0.0",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
