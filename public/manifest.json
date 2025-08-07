@@ -12,6 +12,10 @@
     "48": "logo192.png",
     "128": "logo192.png"
   },
+  "browser_specific_settings": {
+  "gecko": {
+    "id": "{5884c18a-64bc-4d09-a7f0-1fa61a447d88}"
+  }},
   "content_scripts": [
     {
       "matches": [
