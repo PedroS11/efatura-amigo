@@ -8,7 +8,7 @@ const selectCategories = () => {
 
     if (table?.childElementCount > 0) {
         for (let item of table.children) {
-            // If there row already has a category selected, skip it
+            // If the row already has a category selected, skip it
             if(hasActiveButton(item)) {
                 continue
             }
