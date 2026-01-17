@@ -45,3 +45,11 @@ export const mapCompanyToButton = (company: string): number => {
 
     return similarMappings(companyLowercase)
 }
+
+
+export const hasActiveButton = (rowEl: Element)=> {
+    return rowEl.querySelector(
+        '.selecaoSector button.active'
+    ) !== null;
+
+}
