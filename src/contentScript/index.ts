@@ -1,10 +1,13 @@
 import { CATEGORY_BUTTONS_MAPPING, COLUMNS_MAPPING } from "./constants";
 import {hasActiveButton, mapCompanyToButton} from "./helpers";
 
+const table = document.querySelector("#listaPendencias > tbody");
 
+let tableObserver: MutationObserver | null = null;
 
 const selectCategories = () => {
-    const table: Element = document.querySelector("#listaPendencias > tbody")
+    // Pause observer to prevent re-triggering while it clicks buttons
+    tableObserver?.disconnect();
 
     if (table?.childElementCount > 0) {
         for (let item of table.children) {
@@ -25,24 +28,20 @@ const selectCategories = () => {
             }
         }
     }
+
+    // Re-enable observers
+    if (table) {
+        tableObserver?.observe(table, { childList: true, subtree: true });
+    }
 }
 
-selectCategories()
+// Observe the table for content changes (triggered by pagination AJAX)
+if (table) {
+    tableObserver = new MutationObserver(() => {
+        console.log("RENDER - table content changed")
+        selectCategories()
+    });
+    tableObserver.observe(table, { childList: true, subtree: true });
+}
 
-document.addEventListener(
-    'click',
-    function (e) {
-        // @ts-ignore
-        const anchor = e.target.closest('.dataTables_paginate a');
-        if (anchor) {
-            const li = anchor.closest('li');
-
-            // Ignore active or disabled pagination items
-            if (li.classList.contains('active') || li.classList.contains('disabled')) {
-                return;
-            }
-            selectCategories()
-        }
-    },
-    true
-);
+selectCategories();
