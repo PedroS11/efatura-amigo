@@ -1,5 +1,5 @@
 import { CATEGORY_BUTTONS_MAPPING, COLUMNS_MAPPING } from "./constants";
-import { mapCompanyToButton } from "./helpers";
+import {hasActiveButton, mapCompanyToButton} from "./helpers";
 
 
 
@@ -8,6 +8,11 @@ const selectCategories = () => {
 
     if (table?.childElementCount > 0) {
         for (let item of table.children) {
+            // If there row already has a category selected, skip it
+            if(hasActiveButton(item)) {
+                continue
+            }
+
             const company: string = item.firstChild.textContent.trim()
 
             // Click on the expected category
