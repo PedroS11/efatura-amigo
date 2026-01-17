@@ -1,7 +1,7 @@
 import { CATEGORY_BUTTONS_MAPPING, COLUMNS_MAPPING } from "./constants";
 import {hasActiveButton, mapCompanyToButton} from "./helpers";
 
-const table = document.querySelector("#listaPendencias > tbody");
+const table: Element = document.querySelector("#listaPendencias > tbody");
 
 let tableObserver: MutationObserver | null = null;
 
