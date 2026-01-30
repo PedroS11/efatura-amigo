@@ -1,5 +1,6 @@
 import { CATEGORY_BUTTONS_MAPPING, COLUMNS_MAPPING } from "./constants";
 import {hasActiveButton, mapCompanyToButton} from "./helpers";
+import {searchNif} from "../be";
 
 const table: Element = document.querySelector("#listaPendencias > tbody");
 
@@ -17,14 +18,20 @@ const selectCategories = () => {
             }
 
             const company: string = item.firstChild.textContent.trim()
+            const nif = company.split(" - ")?.[0]
 
-            // Click on the expected category
-            const buttonMapped: CATEGORY_BUTTONS_MAPPING | undefined = mapCompanyToButton(company)
-            if (buttonMapped !== undefined) {
-                const categoryButtons = item.children[COLUMNS_MAPPING.CATEGORY_BUTTONS_POSITION]!.children[0];
+            if(nif) {
+                searchNif(nif).then((categoryFromBe) => {
+                    let category: CATEGORY_BUTTONS_MAPPING | undefined = categoryFromBe || mapCompanyToButton(company);
 
-                // @ts-ignore
-                categoryButtons.children[buttonMapped]!.click()
+                    console.log(nif, category);
+                    if(category !== undefined) {
+                        const categoryButtons = item.children[COLUMNS_MAPPING.CATEGORY_BUTTONS_POSITION]!.children[0];
+
+                        // @ts-ignore
+                        categoryButtons.children[category]!.click()
+                    }
+                })
             }
         }
     }
@@ -38,7 +45,6 @@ const selectCategories = () => {
 // Observe the table for content changes (triggered by pagination AJAX)
 if (table) {
     tableObserver = new MutationObserver(() => {
-        console.log("RENDER - table content changed")
         selectCategories()
     });
     tableObserver.observe(table, { childList: true, subtree: true });
