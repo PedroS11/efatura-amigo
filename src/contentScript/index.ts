@@ -18,13 +18,15 @@ const selectCategories = () => {
             }
 
             const company: string = item.firstChild.textContent.trim()
-            const nif = company.split(" - ")?.[0]
+            const nif =  company.split(" - ")?.[0]?.trim()
+
+
 
             if(nif) {
                 searchNif(nif).then((categoryFromBe) => {
-                    let category: CATEGORY_BUTTONS_MAPPING | undefined = categoryFromBe || mapCompanyToButton(company);
+                    console.log("--" + nif+"--", categoryFromBe);
+                    let category: CATEGORY_BUTTONS_MAPPING | undefined = categoryFromBe ?? mapCompanyToButton(company);
 
-                    console.log(nif, category);
                     if(category !== undefined) {
                         const categoryButtons = item.children[COLUMNS_MAPPING.CATEGORY_BUTTONS_POSITION]!.children[0];
 
