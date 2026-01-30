@@ -24,7 +24,6 @@ const selectCategories = () => {
 
             if(nif) {
                 searchNif(nif).then((categoryFromBe) => {
-                    console.log("--" + nif+"--", categoryFromBe);
                     let category: CATEGORY_BUTTONS_MAPPING | undefined = categoryFromBe ?? mapCompanyToButton(company);
 
                     if(category !== undefined) {
