@@ -5,14 +5,16 @@ export enum CATEGORY_BUTTONS_MAPPING {
     "Imoveis",
     "Lares",
     "Outros",
-    // Number 6 is a <p> tag
-    "Reparacao Automovel" = 7,
+    "Reparacao Automovel",
     "Reparacao Motas",
     "Alimentacao/Hotelaria",
     "Cabeleireiro",
     "Animais de Estimacao",
     "Transportes",
-    "Jornais e Revista"
+    "Jornais e Revista",
+    "Comercio a retalho de livros",
+    "Atividades artisticas e literarias",
+    "Atividades dos museus e monumentos historicos"
 }
 
 export const SAUDE_KEYWORDS = ["hospital", "farmacia", "farmácia", "saude", "saúde"];
@@ -25,10 +27,6 @@ export const ANIMAIS_KEYWORDS = ["veterinário", "veterinario"]
 export const REVISTAS_JORNAIS_KEYWORDS = ["revista", "revistas", "jornal", "jornais"]
 
 export const EXACT_COMPANIES_MAPPING = [
-    {
-        company: "503933813 - infraestruturas de portugal, s.a.",
-        button: CATEGORY_BUTTONS_MAPPING.Outros
-    },
     {
         company: "504296434 - municipio da trofa",
         button: CATEGORY_BUTTONS_MAPPING.Ginasio
