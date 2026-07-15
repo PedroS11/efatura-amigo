@@ -27,10 +27,9 @@ const selectCategories = () => {
                     let category: CATEGORY_BUTTONS_MAPPING | undefined = categoryFromBe ?? mapCompanyToButton(company);
 
                     if(category !== undefined) {
-                        const categoryButtons = item.children[COLUMNS_MAPPING.CATEGORY_BUTTONS_POSITION]!.children[0];
+                        const categoryButtons = item.children[COLUMNS_MAPPING.CATEGORY_BUTTONS_POSITION]!.children[0].querySelectorAll("button");
 
-                        // @ts-ignore
-                        categoryButtons.children[category]!.click()
+                        categoryButtons[category]!.click()
                     }
                 })
             }
