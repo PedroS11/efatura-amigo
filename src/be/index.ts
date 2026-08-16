@@ -3,7 +3,7 @@ import {GetCategoryResponse} from "./types";
 import {CATEGORY_BUTTONS_MAPPING} from "../contentScript/constants";
 
 export const searchNif = (nif: string): Promise<CATEGORY_BUTTONS_MAPPING | undefined> => {
-    return axios.get(`https://g5o95bvqaj.execute-api.eu-west-2.amazonaws.com/category/${nif}`)
+    return axios.get(`https://efatura.pedroosilva.dev/api/category/${nif}`)
         .then((response) => {
             const result: GetCategoryResponse = response.data
             return result?.id
